@@ -8,7 +8,10 @@ public class player_movment : MonoBehaviour
 {
 
     public Rigidbody2D _playerRigidbody;
-    public Rigidbody2D _CameraRigidbody;
+    public Transform _CameraTransform;
+    public Vector3 _CameraDistance;
+    public Vector3 __GUIDistance;
+    public Transform _GUIrootTrandform;
 
     private Vector3 playerVelocity;
 
@@ -56,36 +59,36 @@ public class player_movment : MonoBehaviour
         trigger_right.triggers.Add(entry_off_right);
         trigger_left.triggers.Add(entry_off_left);
 
+        _CameraTransform = Camera.main.transform;
+        _CameraDistance = _CameraTransform.position - _playerRigidbody.transform.position;
+        __GUIDistance = _GUIrootTrandform.position - _playerRigidbody.transform.position;
     }
 
     void Update()
     {
-
+        _CameraTransform.position = _playerRigidbody.transform.position + _CameraDistance;  
+        _GUIrootTrandform.position = _playerRigidbody.transform.position + __GUIDistance;
     }
 
     public void OnRight()
     {
-        _playerRigidbody.velocity = new Vector2(playerSpeed, _playerRigidbody.velocity.y);
-        _CameraRigidbody.velocity = new Vector2(playerSpeed, _CameraRigidbody.velocity.y);                  
+        _playerRigidbody.velocity = new Vector2(playerSpeed, _playerRigidbody.velocity.y);          
 
     }
 
     public void OnLeft()
     {
-        _playerRigidbody.velocity = new Vector2(-playerSpeed, _playerRigidbody.velocity.y);
-        _CameraRigidbody.velocity = new Vector2(-playerSpeed, _CameraRigidbody.velocity.y);                  
+        _playerRigidbody.velocity = new Vector2(-playerSpeed, _playerRigidbody.velocity.y);              
     }
 
     public void OffRight()
     {
         _playerRigidbody.velocity = new Vector2(0,0);
-        _CameraRigidbody.velocity = new Vector2(0,0);
     }
 
     public void OffLeft()
     {
         _playerRigidbody.velocity = new Vector2(0,0);
-        _CameraRigidbody.velocity = new Vector2(0,0);
     }
 
 }
