@@ -8,6 +8,9 @@ public class Filter : MonoBehaviour
 {
     public string inventory_need;
     public string inventory_has;
+
+    public GameObject filterwindow;
+
     public int stage = 0;
     public bool take_able = false;
     public string to_add = "";
@@ -16,12 +19,18 @@ public class Filter : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        GetComponent<OpenWindow>().elutable = false;
+
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(inventory_has=="")
+        {
+            GetComponent<OpenWindow>().elutable = false;
+
+        }
         //loop through timers and create new plate when finished
         if (timer > 0)
         {
@@ -55,6 +64,8 @@ public class Filter : MonoBehaviour
             {
                 //inventory_need = Regex.Replace(inventory_need, Collision_has, "");
                 inventory_has = Collision_has;
+                filterwindow.GetComponent<FilterState>().inventory_has = inventory_has;
+                GetComponent<OpenWindow>().elutable = true;
                 Destroy(collision.gameObject);
                 stage += 1;
             }       

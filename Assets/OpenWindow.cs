@@ -8,6 +8,7 @@ using UnityEngine.UI;
 public class OpenWindow : MonoBehaviour
 {
     public GameObject Window;
+    public bool elutable = true;
     // Start is called before the first frame update
     void Start()
     {

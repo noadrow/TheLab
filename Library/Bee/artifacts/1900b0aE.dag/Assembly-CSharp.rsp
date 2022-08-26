@@ -375,6 +375,7 @@
 "Assets/Dragable.cs"
 "Assets/ExitWindow.cs"
 "Assets/Filter.cs"
+"Assets/FilterState.cs"
 "Assets/incubator.cs"
 "Assets/Inventory.cs"
 "Assets/OpenWindow.cs"
