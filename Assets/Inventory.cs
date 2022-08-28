@@ -40,6 +40,8 @@ public class Inventory : MonoBehaviour
                     inventory_need = Regex.Replace(inventory_need, Collision_has, "");
                     inventory_has += Collision_has;
                     Destroy(collision.gameObject);
+                    Debug.Log(collision.gameObject);
+
                 }
             }
         }

@@ -20,7 +20,6 @@ public class Filter : MonoBehaviour
     void Start()
     {
         GetComponent<OpenWindow>().elutable = false;
-
     }
 
     // Update is called once per frame

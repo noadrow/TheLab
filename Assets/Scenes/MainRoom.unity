@@ -239,6 +239,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Window: {fileID: 822136783}
+  elutable: 1
 --- !u!114 &124541133
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1041,6 +1042,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Window: {fileID: 2088645994}
+  elutable: 1
 --- !u!114 &832293014
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1965,7 +1967,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 1.8261, y: 56}
-  m_SizeDelta: {x: 92.8, y: 161.6}
+  m_SizeDelta: {x: 207.5, y: 258.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1281856322
 CanvasRenderer:
@@ -1995,7 +1997,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 993c4ea3bcc00a24fb0fafd914d63f4e, type: 3}
+  m_Texture: {fileID: 2800000, guid: 1db7d37989d78a34e9af5f1b043020c5, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
