@@ -2635,6 +2635,26 @@ PrefabInstance:
       propertyPath: to_add
       value: PlasmidEluted
       objectReference: {fileID: 0}
+    - target: {fileID: 5722250325960592785, guid: 0c1eb8eefe9fe4347bab0537699970bb, type: 3}
+      propertyPath: _canvas
+      value: 
+      objectReference: {fileID: 1191161249}
+    - target: {fileID: 5722250325960592785, guid: 0c1eb8eefe9fe4347bab0537699970bb, type: 3}
+      propertyPath: eppendorf
+      value: 
+      objectReference: {fileID: 5903739613821316583, guid: db11957e7ea8f7240b5a06cd5a7da82b, type: 3}
+    - target: {fileID: 5722250325960592785, guid: 0c1eb8eefe9fe4347bab0537699970bb, type: 3}
+      propertyPath: _eppendorf
+      value: 
+      objectReference: {fileID: 5903739613821316583, guid: db11957e7ea8f7240b5a06cd5a7da82b, type: 3}
+    - target: {fileID: 5722250325960592785, guid: 0c1eb8eefe9fe4347bab0537699970bb, type: 3}
+      propertyPath: inventory_need
+      value: LBBL21PlasmidIncubated
+      objectReference: {fileID: 0}
+    - target: {fileID: 5722250325960592785, guid: 0c1eb8eefe9fe4347bab0537699970bb, type: 3}
+      propertyPath: cleansequence_need
+      value: bound_wash_
+      objectReference: {fileID: 0}
     - target: {fileID: 7858865363407064241, guid: 0c1eb8eefe9fe4347bab0537699970bb, type: 3}
       propertyPath: Window
       value: 

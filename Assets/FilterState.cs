@@ -5,18 +5,28 @@ using UnityEngine;
 public class FilterState : MonoBehaviour
 {
     public string inventory_has;
+    public string inventory_need;
     public string to_add;
     public string cleansequence;
-
+    public string cleansequence_need;
+    public GameObject _eppendorf;
+    public Transform _canvas;
     // Start is called before the first frame update
     void Start()
     {
-        
+    
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        Debug.Log(cleansequence);
+        if(cleansequence==cleansequence_need && inventory_has==inventory_need)
+        {
+            cleansequence = "";
+            inventory_has = "";
+            Instantiate(_eppendorf, transform.position, transform.rotation, _canvas);
+
+        }
     }
 }

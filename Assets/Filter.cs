@@ -63,6 +63,7 @@ public class Filter : MonoBehaviour
             {
                 //inventory_need = Regex.Replace(inventory_need, Collision_has, "");
                 inventory_has = Collision_has;
+                Debug.Log(inventory_has);
                 filterwindow.GetComponent<FilterState>().inventory_has = inventory_has;
                 GetComponent<OpenWindow>().elutable = true;
                 Destroy(collision.gameObject);

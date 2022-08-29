@@ -29,5 +29,6 @@ public class OpenWindow : MonoBehaviour
     void OnClick(PointerEventData data)
     {
         Window.SetActive(true);
+        Window.GetComponent<FilterState>().cleansequence = "";
     }
 }

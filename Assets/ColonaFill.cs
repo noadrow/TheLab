@@ -34,11 +34,12 @@ public class ColonaFill : MonoBehaviour
         {
             _button.interactable = true;
         }
+
+        //if(filterwindow.GetComponent<FilterState>().cleansequence==cleansequence)
     }
 
     void OnClick()
     {
-        
         current  = animator_bottle.GetFloat("BottleLevel");
         animator_bottle.SetFloat("BottleLevel",current-decrase_range);
         filterwindow.GetComponent<FilterState>().cleansequence += ID;
