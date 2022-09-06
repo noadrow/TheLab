@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Stick : MonoBehaviour
 {
-    public GameObject Player;
+    private GameObject Player;
     public bool stick = false;
     public float maxDistance = 25f;
     private float distance;
@@ -13,7 +13,7 @@ public class Stick : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        Player = GameObject.Find("Player");
     }
     
     // Update is called once per frame

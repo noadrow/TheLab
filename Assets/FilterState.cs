@@ -25,7 +25,8 @@ public class FilterState : MonoBehaviour
         {
             cleansequence = "";
             inventory_has = "";
-            Instantiate(_eppendorf, transform.position, transform.rotation, _canvas);
+            GameObject _product = Instantiate(_eppendorf, transform.position, transform.rotation, _canvas);
+            _product.GetComponentInChildren<Inventory>().inventory_has = to_add;
 
         }
     }

@@ -381,6 +381,7 @@
 "Assets/OpenWindow.cs"
 "Assets/player_movment.cs"
 "Assets/Stick.cs"
+"Assets/trackMouse.cs"
 -langversion:9.0
 
 /deterministic

@@ -8,6 +8,7 @@ public class Inventory : MonoBehaviour
 {
     public string inventory_need = "";
     public string inventory_has = "";
+    public GameObject Window = null;
     public bool take_able = false;
 
     // Start is called before the first frame update
@@ -38,9 +39,19 @@ public class Inventory : MonoBehaviour
                 if(Collision_Inventory.take_able)
                 {
                     inventory_need = Regex.Replace(inventory_need, Collision_has, "");
-                    inventory_has += Collision_has;
+                    //inventory_has += Collision_has;
                     Destroy(collision.gameObject);
+                    
                     Debug.Log(collision.gameObject);
+                    if (Window)
+                    {
+                        Window.SetActive(true);
+                        
+                        Window.GetComponentInChildren<trackMouse>().inventory_to_add = Collision_has;
+                        Window.GetComponentInChildren<trackMouse>().entered_plate = gameObject;
+
+                    }
+                    
 
                 }
             }
