@@ -219,7 +219,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fc16d8026103a04fb0dac6ef4605979, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inventory_need: LBBL21PlasmidIncubated
+  inventory_need: BL21PlasmidIncubated
   inventory_has: 
   filterwindow: {fileID: 822136783}
   stage: 0
@@ -306,6 +306,10 @@ PrefabInstance:
       propertyPath: plate_spray
       value: 
       objectReference: {fileID: 1239659611}
+    - target: {fileID: 2888473125154436368, guid: 5ec62fdeaa1203d44b56d867aa328a31, type: 3}
+      propertyPath: inventory_to_add
+      value: LBBL21Plasmid
+      objectReference: {fileID: 0}
     - target: {fileID: 4480694429093274076, guid: 5ec62fdeaa1203d44b56d867aa328a31, type: 3}
       propertyPath: m_Name
       value: 'Plate_Spray '
@@ -2069,7 +2073,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf02e270a890acf4fbc1b4ee5c962434, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inventory_need: LBBL21Plasmid
+  inventory_need: BL21Plasmid
   inventory_has: 
   to_add: Incubated
   timer: -1
@@ -2793,11 +2797,11 @@ PrefabInstance:
       objectReference: {fileID: 5903739613821316583, guid: db11957e7ea8f7240b5a06cd5a7da82b, type: 3}
     - target: {fileID: 5722250325960592785, guid: 0c1eb8eefe9fe4347bab0537699970bb, type: 3}
       propertyPath: inventory_need
-      value: LBBL21PlasmidIncubated
+      value: BL21PlasmidIncubated
       objectReference: {fileID: 0}
     - target: {fileID: 5722250325960592785, guid: 0c1eb8eefe9fe4347bab0537699970bb, type: 3}
       propertyPath: cleansequence_need
-      value: bound_wash_
+      value: bound_wash_elution_
       objectReference: {fileID: 0}
     - target: {fileID: 7858865363407064241, guid: 0c1eb8eefe9fe4347bab0537699970bb, type: 3}
       propertyPath: Window

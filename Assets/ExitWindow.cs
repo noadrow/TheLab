@@ -26,6 +26,7 @@ public class ExitWindow : MonoBehaviour
 
     void OnClick(PointerEventData data)
     {
+        Debug.Log("Exit button clicked");
         Window.SetActive(false);
     }
 }

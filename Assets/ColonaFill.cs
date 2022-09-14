@@ -42,6 +42,7 @@ public class ColonaFill : MonoBehaviour
     {
         current  = animator_bottle.GetFloat("BottleLevel");
         animator_bottle.SetFloat("BottleLevel",current-decrase_range);
+        Debug.Log(ID);
         filterwindow.GetComponent<FilterState>().cleansequence += ID;
         filterwindow.GetComponent<FilterState>().cleansequence += "_";
 

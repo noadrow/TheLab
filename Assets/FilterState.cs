@@ -20,7 +20,6 @@ public class FilterState : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(cleansequence);
         if(cleansequence==cleansequence_need && inventory_has==inventory_need)
         {
             cleansequence = "";
