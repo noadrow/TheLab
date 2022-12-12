@@ -31,13 +31,14 @@ public class deliver : MonoBehaviour
 
     void CheckInOrder(string collisioned)
     { 
-        IDictionary<string,int> orders = computer_window.GetComponent<Computer_Window>().Orders;
+        List<string> orders_name = computer_window.GetComponent<Computer_Window>().Orders_Name;
+        List<int> orders_value = computer_window.GetComponent<Computer_Window>().Orders_Price;
         
-        foreach(KeyValuePair<string, int> order in orders)
+        foreach(var name in new List<string>(orders_name))
         {
-            if(order.Key==collisioned)
+            if(name==collisioned)
             {
-                computer_window.GetComponent<Computer_Window>().RemoveOrder(order.Key);
+                computer_window.GetComponent<Computer_Window>().RemoveOrder(name);
             }
         }
     }

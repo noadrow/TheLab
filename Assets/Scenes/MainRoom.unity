@@ -1556,37 +1556,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 030388046524e5d44878cda844f7f621, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &865039061
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 865039062}
-  m_Layer: 0
-  m_Name: SerializableDictionary
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &865039062
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 865039061}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 92.578224, y: -14.961376, z: 4.457813}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -2874,7 +2843,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventory_has: 
   collisioned: {fileID: 0}
-  computer_window: {fileID: 0}
+  computer_window: {fileID: 2088645994}
 --- !u!50 &1463656739
 Rigidbody2D:
   serializedVersion: 4
@@ -3344,7 +3313,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f1e81df61b65f445acbdb98c251d717, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Bank: 0
+  Orders_Name:
+  - LB
+  Orders_Price: 01000000
+  Bank_Balance: 0
 --- !u!1 &2119870767
 GameObject:
   m_ObjectHideFlags: 0

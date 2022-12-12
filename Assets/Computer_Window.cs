@@ -1,36 +1,34 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-//using DictionaryDrawer;
-//using SerializableDictionary;
 
-//public class CustomDictionary : SerializableDictionary<string, int> { }
 public class Computer_Window : MonoBehaviour
 {
-    
-    //public IDictionary<string,int> Orders = new Dictionary<string,int>();    
-    //public CustomDictionary Orders = new CustomDictionary();
-    public int Bank;
+    public List<string> Orders_Name = new List<string>();
+    public List<int> Orders_Price = new List<int>();
+    public int Bank_Balance;
     
     void Start()
     {
-        AddOrder("LB",1);
 
     }
 
-    public void AddOrder(string order_name, int price)
+    public void AddOrder(string name, int price)
     {
-        Orders.Add(new KeyValuePair<string,int>(order_name,price));
-        foreach (KeyValuePair<string,int> order in Orders)
+        Orders_Name.Add(name);
+        Orders_Price.Add(price);
+        for(var i = 0; i < Orders_Name.Count; i ++)
         {
-            Debug.Log("Key = {0}, Value = {1}"+order.Key+order.Value);
-        }  
+            Debug.Log("Key = {0}, Value = {1}"+Orders_Name[i]+Orders_Price[i]);
+        }
     }
 
-    public void RemoveOrder(string order_name)
+    public void RemoveOrder(string name)
     {
-        Orders.Remove(order_name);
-        Bank += Orders[order_name];
+        int index = Orders_Name.FindIndex(a => a.Contains(name));
+        Bank_Balance += Orders_Price[index];
+        Orders_Name.RemoveAt(index);
+        Orders_Price.RemoveAt(index);
     }
 
     void Update()
